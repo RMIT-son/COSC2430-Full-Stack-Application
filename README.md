@@ -6,12 +6,21 @@ Full Stack Web Application for the course COSC2430 -  Web Programming at RMIT Vi
 The folder structure of this project is as follows:
 
 projectfolder/  
-├── assets/  
+├── node_modules/  
+├── public/  
 │   ├── css/  
-│   │   └── style.css  
-│   └── images/  
-├── scripts/  
+│   │       └── style.css  
+│   ├── images/    
+│   └── index.html  
+├── src/  
+│   ├── controllers/  
+│   ├── middleware/  
+│   ├── models/  
+│   ├── routes/  
+│   ├── services/  
 │   └── index.js  
-├── index.html  
+├── tests/  
+├── views/  
+│   ├── partials/  
 ├── package.json  
 └── README.md  
