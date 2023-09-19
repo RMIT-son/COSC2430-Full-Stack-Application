@@ -1,17 +1,26 @@
-# COSC2431-Full-Stack-Application
-Full Stack Web Application for the course COSC2431 -  Web Programming at RMIT Vietnam
+# COSC2430-Full-Stack-Application
+Full Stack Web Application for the course COSC2430 -  Web Programming at RMIT Vietnam
 
 ## Folder Structure
 
 The folder structure of this project is as follows:
 
 projectfolder/  
-├── assets/  
+├── node_modules/  
+├── public/  
 │   ├── css/  
-│   │   └── style.css  
-│   └── images/  
-├── scripts/  
+│   │       └── style.css  
+│   ├── images/    
+│   └── index.html  
+├── src/  
+│   ├── controllers/  
+│   ├── middleware/  
+│   ├── models/  
+│   ├── routes/  
+│   ├── services/  
 │   └── index.js  
-├── index.html  
+├── tests/  
+├── views/  
+│   ├── partials/  
 ├── package.json  
 └── README.md  
