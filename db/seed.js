@@ -3,7 +3,7 @@ User.insertMany([
       "username": "customer01",
       "password": "Customer@123",
       "role": "customer",
-      "profilePicture": "/path/to/customer01/pic.jpg",
+      "profilePicture": "/path/to/customer01/menprofile.png",
       "name": "Alice Johnson",
       "address": "123 Elm Street, Springfield"
     },
@@ -11,7 +11,7 @@ User.insertMany([
       "username": "customer02",
       "password": "Customer@456",
       "role": "customer",
-      "profilePicture": "/path/to/customer02/pic.jpg",
+      "profilePicture": "/path/to/customer02/womenprofile.png",
       "name": "Bob Smith",
       "address": "456 Maple Avenue, Shelbyville"
     },
@@ -19,7 +19,7 @@ User.insertMany([
       "username": "vendor01",
       "password": "Vendor@789",
       "role": "vendor",
-      "profilePicture": "/path/to/vendor01/pic.jpg",
+      "profilePicture": "/path/to/vendor01/menprofile.png",
       "name": "Charlie Brown",
       "address": "789 Birch Boulevard, Springfield",
       "businessName": "Charlie's Electronics"
@@ -28,7 +28,7 @@ User.insertMany([
       "username": "vendor02",
       "password": "Vendor@101",
       "role": "vendor",
-      "profilePicture": "/path/to/vendor02/pic.jpg",
+      "profilePicture": "/path/to/vendor02/menprofile.png",
       "name": "Diana White",
       "address": "101 Pine Place, Capital City",
       "businessName": "Diana's Delights"
@@ -37,7 +37,7 @@ User.insertMany([
       "username": "shipper01",
       "password": "Shipper@121",
       "role": "shipper",
-      "profilePicture": "/path/to/shipper01/pic.jpg",
+      "profilePicture": "/path/to/shipper01/womenprofile.png",
       "name": "Edward Black",
       "address": "121 Cedar Court, Ogdenville",
       "distributionHub": "Hanoi"
@@ -90,35 +90,35 @@ Product.insertMany(
           "vendorId": "613a8a785d744ab59c488a89",  // Sample ObjectId for vendor reference
           "name": "Wireless Bluetooth Headphones",
           "price": 49.99,
-          "image": "/path/to/product1/image.jpg",
+          "image": "/path/to/product1/airpods.png",
           "description": "High-quality wireless headphones with noise-cancelling feature."
         },
         {
           "vendorId": "613a8a785d744ab59c488a90",
           "name": "Ultra Slim Laptop",
           "price": 799.99,
-          "image": "/path/to/product2/image.jpg",
+          "image": "/path/to/product2/laptop.png",
           "description": "Lightweight, ultra slim laptop with 13-inch display and 12-hour battery life."
         },
         {
           "vendorId": "613a8a785d744ab59c488a91",
           "name": "Smart LED TV",
           "price": 299.99,
-          "image": "/path/to/product3/image.jpg",
+          "image": "/path/to/product3/tv.png",
           "description": "40-inch Smart LED TV with crystal clear display and internet connectivity."
         },
         {
           "vendorId": "613a8a785d744ab59c488a92",
           "name": "Portable Bluetooth Speaker",
           "price": 24.99,
-          "image": "/path/to/product4/image.jpg",
+          "image": "/path/to/product4/speaker.png",
           "description": "Compact portable Bluetooth speaker with powerful sound output."
         },
         {
           "vendorId": "613a8a785d744ab59c488a93",
           "name": "Digital Camera",
           "price": 199.99,
-          "image": "/path/to/product5/image.jpg",
+          "image": "/path/to/product5/camera.png",
           "description": "20MP digital camera with 5x optical zoom and 1080p video recording."
         }
       ]      
