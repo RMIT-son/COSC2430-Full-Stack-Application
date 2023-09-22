@@ -1,6 +1,11 @@
+// RMIT University Vietnam
+// Course: COSC2430 Web Programming
+// Semester: 2023A
+// Assessment: Assignment 2
+// Author: Dang Quoc Thang
+// ID: s3977877
+// Acknowledgement: Acknowledge the resources that you use here.
 const mongoose = require('mongoose');
-
-
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
