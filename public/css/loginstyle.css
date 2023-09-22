@@ -1588,7 +1588,7 @@ pre {
   .table-responsive > .table-bordered {
     border: 0; }
 
-.form-control {
+.form-control{
   display: block;
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
@@ -8185,7 +8185,7 @@ a {
     .text-wrap, .login-wrap {
       width: 100%; } }
 
-.text-wrap {
+.text-wra, .bg-color {
   background: #A6B1E1;
   background: -moz-linear-gradient(-45deg, #A6B1E1 0%, #424874 100%);
   background: -webkit-gradient(left top, right bottom, color-stop(0%, #A6B1E1), color-stop(100%, #424874));
@@ -8218,12 +8218,16 @@ a {
   .form-group a {
     color: gray; }
 
+.form-select option{
+  color: #000 !important;
+  font-weight: 200;
+}
 .form-control {
   height: 48px;
   background: rgba(0, 0, 0, 0.05);
   color: #000;
   font-size: 16px;
-  border-radius: 50px;
+  border-radius: 50px; 
   -webkit-box-shadow: none;
   box-shadow: none;
   border: 1px solid transparent;
