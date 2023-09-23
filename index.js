@@ -1,11 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const {static} = require("express");
+const { urlencoded } = require('express');
+const Product = require('./models/plan.model');
 const app = express();
 const User = require('./db/plan.model')
 const shopController = require('./public/shop')
-
-// Connect to MongoDB
 
 
 // Set up EJS as the view engine

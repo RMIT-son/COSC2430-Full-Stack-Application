@@ -44,7 +44,7 @@ User.insertMany([
     }
 ])
   .then(() => {
-    console.log('Data seeded successfully.');
+    console.log('User Data seeded successfully.');
     process.exit();
   })
   .catch(error => {
@@ -55,29 +55,21 @@ User.insertMany([
 DistributionHub.insertMany(
     [
         {
-          "name": "Ho Chi Minh Hub",
+          "name": "Ho Chi Minh",
           "address": "123 Nguyen Hue Street, District 1, Ho Chi Minh City"
         },
         {
-          "name": "Da Nang Hub",
+          "name": "Da Nang",
           "address": "456 Tran Phu Street, Hai Chau District, Da Nang City"
         },
         {
-          "name": "Hanoi Hub",
+          "name": "Hanoi",
           "address": "789 Hoang Quoc Viet Street, Cau Giay District, Hanoi City"
         },
-        {
-          "name": "Can Tho Hub",
-          "address": "101 Vo Van Kiet Street, Ninh Kieu District, Can Tho City"
-        },
-        {
-          "name": "Hue Hub",
-          "address": "234 Le Loi Street, Phu Hoi Ward, Hue City"
-        }
     ]
 )
 .then(() => {
-    console.log('Data seeded successfully.');
+    console.log('Hub Data seeded successfully.');
     process.exit();
   })
   .catch(error => {
