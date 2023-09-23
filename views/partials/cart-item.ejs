@@ -1,0 +1,37 @@
+<% products.forEach(function(product){ %>
+<div class="row gy-3 mb-4">
+    <div class="col-lg-5">
+      <div class="me-lg-5">
+        <div class="d-flex">
+          <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/11.webp" class="border rounded me-3" style="width: 96px; height: 96px;" />
+          <div class="">
+            <a href="#" class="nav-link">Winter jacket for men and lady</a>
+            <p class="text-muted">Yellow, Jeans</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-2 col-sm-6 col-6 d-flex flex-row flex-lg-column flex-xl-row text-nowrap">
+      <div class="">
+        <select style="width: 100px;" class="form-select me-4">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+      </div>
+      <div class="">
+        <text class="h6">$1156.00</text> <br />
+        <small class="text-muted text-nowrap"> $460.00 / per item </small>
+      </div>
+    </div>
+    <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
+      <div class="float-md-end">
+        <a href="#!" class="btn btn-outline-light px-2 icon-hover-primary"><img class="px-1 text-secondary" src="images/heart.svg"></a>
+        <button type="button" class="btn btn-dark btn-outline-light  mt-auto mx-auto">
+          Remove
+        </button>
+      </div>
+    </div>
+  </div>
+  <% }); %>
