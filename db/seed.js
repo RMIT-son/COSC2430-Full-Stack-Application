@@ -138,72 +138,72 @@ Product.insertMany(
     console.error('Error seeding data:', error);
   });
 
-ShoppingCart.insertMany(
-    [
-        {
-          "userId": "613b8a785d744ab59c488a80",  // Sample ObjectId for user reference
-          "items": [
-            {
-              "productId": "613c8a785d744ab59c488a50", // Sample ObjectId for product reference
-              "quantity": 2,
-              "priceAtOrder": 49.99
-            },
-            {
-              "productId": "613c8a785d744ab59c488a51",
-              "quantity": 1,
-              "priceAtOrder": 799.99
-            }
-          ]
-        },
-        {
-          "userId": "613b8a785d744ab59c488a81",
-          "items": [
-            {
-              "productId": "613c8a785d744ab59c488a52",
-              "quantity": 1,
-              "priceAtOrder": 299.99
-            }
-          ]
-        },
-        {
-          "userId": "613b8a785d744ab59c488a82",
-          "items": [
-            {
-              "productId": "613c8a785d744ab59c488a53",
-              "quantity": 3,
-              "priceAtOrder": 24.99
-            },
-            {
-              "productId": "613c8a785d744ab59c488a54",
-              "quantity": 1,
-              "priceAtOrder": 199.99
-            }
-          ]
-        },
-        {
-          "userId": "613b8a785d744ab59c488a83",
-          "items": []
-        },
-        {
-          "userId": "613b8a785d744ab59c488a84",
-          "items": [
-            {
-              "productId": "613c8a785d744ab59c488a55",
-              "quantity": 1,
-              "priceAtOrder": 49.99
-            }
-          ]
-        }
-      ]
+// ShoppingCart.insertMany(
+//     [
+//         {
+//           "userId": "613b8a785d744ab59c488a80",  // Sample ObjectId for user reference
+//           "items": [
+//             {
+//               "productId": "613c8a785d744ab59c488a50", // Sample ObjectId for product reference
+//               "quantity": 2,
+//               "priceAtOrder": 49.99
+//             },
+//             {
+//               "productId": "613c8a785d744ab59c488a51",
+//               "quantity": 1,
+//               "priceAtOrder": 799.99
+//             }
+//           ]
+//         },
+//         {
+//           "userId": "613b8a785d744ab59c488a81",
+//           "items": [
+//             {
+//               "productId": "613c8a785d744ab59c488a52",
+//               "quantity": 1,
+//               "priceAtOrder": 299.99
+//             }
+//           ]
+//         },
+//         {
+//           "userId": "613b8a785d744ab59c488a82",
+//           "items": [
+//             {
+//               "productId": "613c8a785d744ab59c488a53",
+//               "quantity": 3,
+//               "priceAtOrder": 24.99
+//             },
+//             {
+//               "productId": "613c8a785d744ab59c488a54",
+//               "quantity": 1,
+//               "priceAtOrder": 199.99
+//             }
+//           ]
+//         },
+//         {
+//           "userId": "613b8a785d744ab59c488a83",
+//           "items": []
+//         },
+//         {
+//           "userId": "613b8a785d744ab59c488a84",
+//           "items": [
+//             {
+//               "productId": "613c8a785d744ab59c488a55",
+//               "quantity": 1,
+//               "priceAtOrder": 49.99
+//             }
+//           ]
+//         }
+//       ]
       
-)
-.then(() => {
-    console.log('Data seeded successfully.');
-    process.exit();
-  })
-  .catch(error => {
-    console.error('Error seeding data:', error);
-  });
+// )
+// .then(() => {
+//     console.log('Data seeded successfully.');
+//     process.exit();
+//   })
+//   .catch(error => {
+//     console.error('Error seeding data:', error);
+//   });
 
 Order.insertMany(
     [
