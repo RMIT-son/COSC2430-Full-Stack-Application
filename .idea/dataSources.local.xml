@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="WS-232.9921.42">
+    <data-source name="web2023" uuid="9bc81b8b-b7c7-4cb9-80eb-97551b3d59b3">
+      <database-info product="Mongo DB" version="6.0.10" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.18" dbms="MONGO" exact-version="6.0.10" exact-driver-version="1.18" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>web2023</user-name>
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>

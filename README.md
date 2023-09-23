@@ -5,12 +5,13 @@ Full Stack Web Application for the course COSC2430 -  Web Programming at RMIT Vi
 
 The folder structure of this project is as follows:
 
+```mermaid
 projectfolder/  
 ├── node_modules/  
 ├── public/  
-│   ├── css/  
-│   │       └── style.css  
-│   ├── images/    
+│   ├── css/   
+│   ├── images/  
+│   ├── js/  
 │   └── index.html  
 ├── src/  
 │   ├── controllers/  
@@ -21,6 +22,6 @@ projectfolder/
 │   └── index.js  
 ├── tests/  
 ├── views/  
-│   ├── partials/  
+│   └──  partials/  
 ├── package.json  
 └── README.md  
