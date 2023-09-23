@@ -1,4 +1,5 @@
   <!-- Section-->
+  <% products.forEach(function(product){ %>
   <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
       <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
@@ -10,53 +11,9 @@
             <div class="card-body p-4">
               <div class="text-center">
                 <!-- Product name-->
-                <h5 class="fw-bolder">Fancy Product</h5>
+                <h5 class="fw-bolder"><%= product.name %>></h5>
                 <!-- Product price-->
-                $40.00 - $80.00
-              </div>
-            </div>
-            <!-- Product actions-->
-            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent mx-auto">
-				<button type="button" class="btn btn-outline-dark mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
-					View options
-				</button>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col mb-5">
-          <div class="card h-100">
-            <!-- Product image-->
-            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-            <!-- Product details-->
-            <div class="card-body p-4">
-              <div class="text-center">
-                <!-- Product name-->
-                <h5 class="fw-bolder">Fancy Product</h5>
-                <!-- Product price-->
-                $40.00 - $80.00
-              </div>
-            </div>
-            <!-- Product actions-->
-            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent mx-auto">
-				<button type="button" class="btn btn-outline-dark mt-auto mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
-					View options
-				</button>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col mb-5">
-          <div class="card h-100">
-            <!-- Product image-->
-            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-            <!-- Product details-->
-            <div class="card-body p-4">
-              <div class="text-center">
-                <!-- Product name-->
-                <h5 class="fw-bolder">Fancy Product</h5>
-                <!-- Product price-->
-                $40.00 - $80.00
+                <%= product.price %>
               </div>
             </div>
             <!-- Product actions-->
@@ -69,7 +26,7 @@
         </div>
       </div>
     </div>
-  </section>
+    
   <!-- Button trigger modal -->
 
 <!-- Modal -->
@@ -87,14 +44,6 @@
 			</div>
 			<div class="col-md-6 product_content">
 				<h4>Product Id: <span>51526</span></h4>
-				<div class="rating">
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star"></span>
-					(10 reviews)
-				</div>
 				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 				<h3 class="cost"><span class="glyphicon glyphicon-usd"></span> 75.00 <small class="pre-cost"><span class="glyphicon glyphicon-usd"></span> 60.00</small></h3>
     </div>
@@ -107,3 +56,5 @@
 </div>
 </div>
 </div>
+  </section>
+  <% }); %>
