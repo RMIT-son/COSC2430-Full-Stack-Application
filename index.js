@@ -1,12 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const {static} = require("express");
+const { urlencoded } = require('express');
+const Product = require('./models/plan.model');
 const app = express();
-
-// Connect to MongoDB
-mongoose.connect('mongodb://localhost/myapp', { useNewUrlParser: true })
-    .then(() => console.log('MongoDB Connected'))
-    .catch(err => console.log(err));
 
 // Set up EJS as the view engine
 app.set('view engine', 'ejs');
