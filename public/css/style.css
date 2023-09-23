@@ -31,33 +31,35 @@ a.more {
 
 .catalog-banner {
   position: relative;
+  text-align: center;
+  color: white;
+  height: 400px; /* Set the height explicitly */
 }
 
 .catalog-banner img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover;
 }
 
-.catalog-banner-content {
+.catalog-banner-content-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-  color: #fff; /* Text color */
-  padding: 20px;
-  max-width: 80%; /* Adjust the width as needed */
+  text-align: center;
+  width: 100%;
+}
+
+.catalog-banner-content {
+  font-size: 18px;
+  color: white;
   text-align: center;
 }
 
 .catalog-banner-title {
-  font-size: 2rem; /* Adjust the font size as needed */
-}
-
-.catalog-banner-description {
-  margin-top: 10px; /* Adjust the spacing as needed */
-  font-size: 1.2rem; /* Adjust the font size as needed */
+  font-size: 54px;
+  margin: 0; /* Add this to remove any default margin */
 }
 
 .custom-navbar {
@@ -423,7 +425,7 @@ a.more {
 .we-help-section .imgs-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr) [27];
+  /* -ms-grid-columns: (1fr) [27]; */
   grid-template-columns: repeat(27, 1fr);
   position: relative;
 }
