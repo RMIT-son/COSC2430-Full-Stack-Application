@@ -28,9 +28,11 @@
     <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
       <div class="float-md-end">
         <a href="#!" class="btn btn-outline-light px-2 icon-hover-primary"><img class="px-1 text-secondary" src="images/heart.svg"></a>
-        <button type="button" class="btn btn-dark btn-outline-light  mt-auto mx-auto">
-          Remove
-        </button>
+        <form class="button" action="/remove/<%= product._id %>" method="post">
+            <button type="button" class="btn btn-dark btn-outline-light  mt-auto mx-auto">
+            Remove
+          </button>
+        </form>
       </div>
     </div>
   </div>

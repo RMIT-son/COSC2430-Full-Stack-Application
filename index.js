@@ -13,7 +13,6 @@ const customerController = require('./src/controllers/customerController');
 const app = express();
 const multer = require('multer');
 
-
 // Set up EJS as the view engine
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
