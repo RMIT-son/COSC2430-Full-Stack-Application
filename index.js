@@ -16,6 +16,17 @@ app.use(express.static('./public'));
 // Set up routes
 app.get('/', productController.getIndexPage);
 
+
+
+
+// Static Pages
+app.get('/contact', (req, res) =>
+    res.render('contact')
+);
+app.get('/about', (req, res) =>
+    res.render('about')
+);
+
 // Start the server
 const port = 3030;
 app.listen(port, () => console.log(`Server running on port http://localhost:${port}`));
