@@ -4,31 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" name="Changes" comment="added some base code">
-      <change afterPath="$PROJECT_DIR$/src/controllers/customerController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/shipperController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/shoppingCartController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/vendorController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware/authMiddleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware/hashMiddleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware/sessionMiddleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/hubModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/orderModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/productModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/userModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/customerRoutes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/shipperRoutes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/userRoutes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/vendorRoutes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/mongoose.js" afterDir="false" />
+    <list default="true" id="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" name="Changes" comment="render index">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/mongoose.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/plan.model.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/seed.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/home-layout.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/home-layout.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,13 +23,32 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="chi-branch" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "RMIT-son"
+  }
+}]]></component>
   <component name="GithubProjectSettings">
     <option name="branchProtectionPatterns">
       <list>
         <option value="main" />
       </list>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="47b5c789-c4b5-46a9-a5fe-048af73cd3d6" />
+        <option name="url" value="https://github.com/RMIT-son/COSC2430-Full-Stack-Application.git" />
+      </UrlAndAccount>
     </option>
   </component>
   <component name="MarkdownSettingsMigration">
@@ -63,23 +62,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Razer/Documents/GitHub/COSC2430-Full-Stack-Application&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Razer/Desktop/final-exam-materials",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Razer\Documents\GitHub\COSC2430-Full-Stack-Application" />
       <recent name="C:\Users\Razer\Documents\GitHub\COSC2430-Full-Stack-Application\src\services" />
       <recent name="C:\Users\Razer\Documents\GitHub\COSC2430-Full-Stack-Application\src\models" />
     </key>
@@ -113,6 +113,7 @@
       <workItem from="1695453127042" duration="602000" />
       <workItem from="1695467509560" duration="1074000" />
       <workItem from="1695481469544" duration="4790000" />
+      <workItem from="1695524096609" duration="4783000" />
     </task>
     <task id="LOCAL-00001" summary="added some base code">
       <option name="closed" value="true" />
@@ -122,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695091375073</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="render index">
+      <option name="closed" value="true" />
+      <created>1695540081928</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695540081928</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +139,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added some base code" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some base code" />
+    <MESSAGE value="render index" />
+    <option name="LAST_COMMIT_MESSAGE" value="render index" />
   </component>
 </project>

@@ -1,3 +1,10 @@
+const mongoose = require('mongoose')
+
+const User = require('./src/models/userModel');
+const Product = require('./src/models/productModel');
+const Order = require('./src/models/orderModel');
+const DistributionHub = require('./src/models/hubModel');
+
 User.insertMany([
     {
       "username": "customer01",
