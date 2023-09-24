@@ -15,7 +15,7 @@ async function addToCart(req, res) {
             await newCartProduct.save();
             res.redirect('/');
             }
-            res.redirect('/failed');
+            res.redirect('/cart');
         } catch (e) {
             console.log(e);
         }
@@ -25,7 +25,7 @@ async  function removeFromCart(req, res){
     try {
         const product = await Product.findById(req.params.id);
         const user = req.isAuthenticated() ? req.user : {userType: ''};
-        await Product.deleteOne({ product: product, customer: user._id });
+        await Product.deleteOne({ product: product._id, customer: user._id });
 
         res.redirect('/cart');
     } catch (e) {

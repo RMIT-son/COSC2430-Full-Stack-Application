@@ -90,6 +90,25 @@ app.get('/signup/shipper', checkNotAuthenticated, (req, res) => {
     res.render('shipper-signup');
 });
 
+app.get("/profile", checkAuthenticated, (req, res) => {
+    res.render("profile", { user: req.user });
+})
+
+app.get('/cart', checkAuthenticated, async (req, res) => {
+    try {
+        const user = req.isAuthenticated() ? req.user : { userType: '' };
+        const cartItems = await Cart.find({ customer: user._id }).populate('product');
+        let total = 0;
+        cartItems.forEach(function(cartItem) {
+            total = total + cartItem.product.price;
+        }) 
+
+        res.render('shopping-cart', { user: user, cartItems: cartItems, total : total , req : req});
+    } catch (e) {
+        console.log(e);
+        return res.send("An error has occurred");
+    }
+});
 app.post('/signup/customer', upload, customerController.signup);
 
 app.post('/signup/vendor', upload, vendorController.signup)
