@@ -56,30 +56,39 @@
 									<input type="text" class="form-control" placeholder="Username" required>
 								</div>
 								<div class="form-group mb-3">
-									<label class="label" for="password">Address</label>
+									<label class="label" for="Address">Address</label>
 									<input type="text" class="form-control" placeholder="Address" required>
 								</div>
 								<div class="form-group mb-3">
 									<label class="label" for="password">Password</label>
 									<input type="password" class="form-control" placeholder="Password" required>
 								</div>
-
+								<div class="form-group mb-3">
+									<label class="label" for="type">Type</label>
+									<br>
+									<select id="type" name="type">
+										<option value="customer">Customer</option>
+										<option value="vendor">Vendor</option>
+										<option value="shipper">Shipper</option>
+									</select>
+								</div>
 								<div class="card-body media align-items-center h-1">
-									<img src="https://bootdey.com/img/Content/avatar/avatar1.png" width ="30%" alt
-										 class="d-block ui-w-20">
+									<img src="https://bootdey.com/img/Content/avatar/avatar1.png" width="30%" alt
+										class="d-block ui-w-20">
 									<div class="media-body ml-4 mt-5">
 										<label class="btn btn-outline-primary">
 											Upload new photo
 											<input type="file" class="account-settings-fileinput">
 										</label> &nbsp;
 										<button type="button" class="btn btn-default md-btn-flat">Reset</button>
-										<div class="text-light small mt-1">Allowed JPG, GIF or PNG. Max size of 800K</div>
+										<div class="text-light small mt-1">Allowed JPG, GIF or PNG. Max size of 800K
+										</div>
 									</div>
 								</div>
 
 								<div class="form-group">
 									<button type="submit" class="form-control btn btn-primary submit px-3">Register
-										</button>
+									</button>
 								</div>
 							</form>
 						</div>
