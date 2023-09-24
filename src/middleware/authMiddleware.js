@@ -1,4 +1,4 @@
-const User = require('./src/models/userModel');
+const User = require('src/models/userModel');
 const bcrypt = require('bcrypt');
 
 function checkAuthenticated(req, res, next){
@@ -23,21 +23,34 @@ function checkNotAuthenticated(req, res, next){
 }
 
     // Function to authenticate users
-    const authenticateUsers = async (username, password, done) => {
-        const username = req.body.username;
 
-        const findUser = await User.findOne({ username: username });
-        if(!findUser) {
-            return done(null, false, {message: "No user found with that username"})
+    // Session matching
+async function authenticateUser(username, password, done) {
+    try {
+        const user = await User.findOne({ username: username });
+
+        if (!user) {
+            // No user found with the provided username
+            return done(null, false, { message: 'Incorrect username or password' });
         }
-        try {
-            if(await bcrypt.compare(password, user.password)){
-                return done(null, user)
-            } else{
-                return done (null, false, {message: "Password Incorrect"})
-            }
-        } catch (error) {
-            console.log(error);
-            return done(error)
+
+        const isPasswordMatch = await bcrypt.compare(password, user.password);
+
+        if (isPasswordMatch) {
+            // Password matches, return the user
+            return done(null, user);
+        } else {
+            // Wrong password
+            return done(null, false, { message: 'Incorrect username or password' });
         }
+    } catch (error) {
+        return done(error);
     }
+}
+
+module.exports = {
+    checkAuthenticated,
+    checkNotAuthenticated,
+    authenticateUser
+}
+
