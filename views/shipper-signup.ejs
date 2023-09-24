@@ -37,27 +37,27 @@
                                 <form action="/signup" class="signup-form" method="post">
                               <div class="form-group mb-3">
                                   <label class="label" for="username">Username</label>
-                                  <input type="text" class="form-control" placeholder="Username" required>
+                                  <input type="text" class="form-control" placeholder="Username" name="username" required>
                               </div>
                             <div class="row">
                                 <div class="form-group mb-3">
                                 <label class="label" for="formFileMultiple">Profile Picture</label>
-                                <input class="form-control form-control-lg" type="file" id="formFileMultiple" multiple>
+                                <input class="form-control form-control-lg" type="file" id="formFileMultiple" name="profilePicture" multiple>
                               </div>
                             </div>
                             <div class="row">
                                 <div class="form-group mb-3">
                                     <label class="label" for="address">Address</label>
-                                    <textarea class="form-control rounded-4" rows="4"></textarea>
+                                    <textarea class="form-control rounded-4" rows="4" name="address" type="text"></textarea>
                                 </div>
                             </div>
                         <div class="form-group mb-3">
                             <label class="label" for="password">Password</label>
-                          <input type="password" class="form-control" placeholder="Password" required>
+                          <input type="password" class="form-control" placeholder="Password" name="password" required>
                         </div>
                         <div class="row">
                             <div class="form-group mb-3 col-6">
-                                <label class="label" for="distribution Hub">Distribution Hub</label>
+                                <label class="label" for="distributionHub">Distribution Hub</label>
                                 <select class="form-select form-control" aria-label="select">
                                     <option selected >Distribution Hub</option>
                                     <option value="1">Ho Chi Minh</option>
