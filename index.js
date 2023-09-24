@@ -2,10 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const {static} = require("express");
 const { urlencoded } = require('express');
-const Product = require('./models/plan.model');
+const Product = require('./src/models/productModel');
 const app = express();
-const User = require('./db/plan.model')
-const shopController = require('./public/shop')
 
 
 // Set up EJS as the view engine
@@ -14,7 +12,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('./public'));
 
 // Set up routes
-app.get('/', shopController.getAllProducts);
+// app.get('/', shopController.getAllProducts);
+
+app.get('/', (req, res) => {
+    Product.find()
+        .then((products) => {
+            res.render('index', { products: products });
+        })
+        .catch((error) => console.log(error.message));
+});
 
 // app.get('/login', (req, res) => {
 //     res.render('login');
@@ -47,4 +53,4 @@ app.get('/', shopController.getAllProducts);
 // });
 // Start the server
 const port = 3030;
-app.listen(port, () => console.log(`Server running on port ${port}`));
+app.listen(port, () => console.log(`Server running on port http://localhost:${port}`));

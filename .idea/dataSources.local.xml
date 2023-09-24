@@ -6,7 +6,11 @@
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <secret-storage>master_key</secret-storage>
       <user-name>web2023</user-name>
-      <schema-mapping />
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" negative="1" />
+        </introspection-scope>
+      </schema-mapping>
     </data-source>
   </component>
 </project>
