@@ -8157,6 +8157,9 @@ a {
 .ftco-section {
   padding: 7em 0; }
 
+.ftco-section-register {
+  padding: 3em 0; }
+
 .ftco-no-pt {
   padding-top: 0; }
 
@@ -8383,3 +8386,11 @@ a {
         border: 1px solid transparent;
         background: #fff;
         color: #000; }
+
+.account-settings-fileinput {
+  position  : absolute;
+  visibility: hidden;
+  width     : 1px;
+  height    : 1px;
+  opacity   : 0;
+}

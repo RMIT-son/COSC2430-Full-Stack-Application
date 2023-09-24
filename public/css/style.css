@@ -62,6 +62,68 @@ a.more {
   margin: 0; /* Add this to remove any default margin */
 }
 
+.middle-header {
+  text-align: center;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 2%;;
+}
+
+.middle-header h1 {
+  margin-top: 2%;
+}
+
+.middle-header h3 {
+  margin-top: 2%;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #424874;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #242841;
+}
+
+.form-container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 60%;
+  margin-left: 20%;
+}
+
+iframe {
+  margin: 2%;
+}
+
 .custom-navbar {
   background: #424874 !important;
   padding-top: 20px;
