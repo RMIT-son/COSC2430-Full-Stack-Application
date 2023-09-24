@@ -1,3 +1,35 @@
+<div class="container">
+
+  <div class="row height d-flex justify-content-center align-items-center">
+
+      <form action="/" method="get">
+          <div class="row">
+        <div class="form-group col-md-6">
+        <input type="text" class="form-control form-input" placeholder="Search product..." name="search">
+        </div>
+        <div class="form-group col-md-3">
+            <input type="text" class="form-control form-input" placeholder="Minimum Price" name="min">
+        </div>
+          <div class="form-group col-md-3">
+              <input type="text" class="form-control form-input" placeholder="Maximum Price" name="max">
+          </div>
+          </div>
+          <div class="row">
+              <div class="form-group col-md-6 text-center">
+                  <button type="submit" class="btn btn-outline-dark mt-auto">Filter</button>
+              </div>
+              <div class="form-group col-md-6 text-center">
+                  <button type="submit" class="btn btn-outline-dark mt-auto">Search</button>
+              </div>
+          </div>
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
   <!-- Section-->
   <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
@@ -13,17 +45,21 @@
                 <!-- Product name-->
                 <h5 class="fw-bolder"><%= product.name %></h5>
                 <!-- Product price-->
-                <%= product.price %>
+                <%= product.price.toLocaleString(undefined, { style: 'currency', currency: 'USD' }) %>
               </div>
             </div>
             <!-- Product actions-->
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent mx-auto">
-                <a type="button" class="btn btn-outline-dark mt-auto" href="/product/<%=product._id%>">
+                <div class="row">
+                <a type="button" class="btn btn-outline-dark mt-auto" href="/product/<%= product.id %>">
                   View Details
                 </a>
-                <button type="button" class="btn btn-outline-dark mt-auto" onclick="addToCart('<%=product._id%>')">
-                    Add to cart
-                </button>
+                <form action="/product/<%= product._id %>" method="post">
+                    <button type="submit" class="btn btn-outline-dark mt-auto" >
+                        Add to cart
+                    </button>
+                </form>
+                </div>
             </div>
           </div>
         </div>

@@ -29,6 +29,7 @@ const orderSchema = new mongoose.Schema({
     status: {
         type: String,
         default: "Active",
+        enum: ["active", "delivered", "cancelled"],
         require: true,
     }
 });

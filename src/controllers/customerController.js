@@ -1,16 +1,16 @@
-const mongoose = require('mongoose');
-const Product = require('../models/productModel');
-const User = require('../models/userModel');
+const {User} = require('../models/userModel');
 const bcrypt = require('bcrypt');
+const {hashPassword} = require("../middleware/hashMiddleware");
+const {Customer} = require("../models/userModel");
 
 
-exports.loginUser = async(req, res) => {
+async function login(req, res) {
     const findUser = await User.findOne(User => User.name === req.body.name);
     if(!findUser) {
         return res.status(400).send('Cannot find user')
     }
     try {
-        if(await bcrypt.compare(req.body.password, user.password)) {
+        if(await bcrypt.compare(req.body.password, findUser.password)) {
             res.send('Success')
         }
         else{
@@ -22,10 +22,40 @@ exports.loginUser = async(req, res) => {
     }
 }
 
-exports.getAllProducts = (req, res, next) => {
-    Product.find()
-        .then(products => {
-            res.render('index', {products:products});
+async function signup(req, res) {
+    const username = req.body.username;
+    const password = req.body.password;
+    const name = req.body.name;
+    const address = req.body.address;
+    const filename = req.file.path;
+
+    const findUser = await User.findOne({ username: username });
+    if(!findUser) {
+        const hashedPassword = await hashPassword(password);
+        const newUser = new Customer({
+            username: username,
+            password: hashedPassword,
+            userType: 'customer',
+            profilePicturePath: filename,
+            name: name,
+            address: address
         })
-        .catch(err => console.log(err));
-};
+        await newUser.save()
+            .then(result =>{
+                res.redirect('/login');
+            }).catch(err => {
+                console.error('User creation error:', err);
+                throw new Error('Create user failed');
+            })
+    }
+    else{
+        throw new Error("User already exists")
+    }
+}
+
+module.exports = {
+    login,
+    signup
+}
+
+

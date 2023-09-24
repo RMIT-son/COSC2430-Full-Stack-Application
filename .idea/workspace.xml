@@ -4,16 +4,60 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" name="Changes" comment="routed static files">
+    <list default="true" id="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/server-images/image-1695586489581329254912_5685900464853140_6795320968156411569_n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-images/image-1695589597186334770207_125460337162039_8057217150012971869_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-images/image-1695589858081334770207_125460337162039_8057217150012971869_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-images/image-1695590227693334504479_1189074208441152_7096400097953255749_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-images/image-1695591939711329254912_5685900464853140_6795320968156411569_n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/userController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/cartModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/productDetail.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/9bc81b8b-b7c7-4cb9-80eb-97551b3d59b3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9bc81b8b-b7c7-4cb9-80eb-97551b3d59b3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/customerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/customerController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/productController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/shipperController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/shipperController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/shoppingCartController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/shoppingCartController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/vendorController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/vendorController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/middleware/authMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/authMiddleware.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/middleware/hashMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/hashMiddleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/sessionMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/validateMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/orderModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/orderModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/productModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/productModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/customer-signup.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/customer-signup.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/home-layout.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/home-layout.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/profile.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/profile.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/shipper-signup.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/shipper-signup.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/signup.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/signup.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/vendor-signup.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/vendor-signup.ejs" afterDir="false" />
+    </list>
+    <list id="c296b23f-36f8-49fb-9124-67960c6127f7" name="Changes by macbook" comment="">
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/authMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/authMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/cart-item.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/cart-item.ejs" afterDir="false" />
+    </list>
+    <list id="1fc04da3-0151-468f-8a53-d0be7de512f2" name="Changes by qchi1708" comment="Changes by qchi1708">
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/about.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/about.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/contact.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/contact.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/customer-signup.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/customer-signup.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/order-details.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/order-details.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/header.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/home-layout.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/home-layout.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/order-details-card.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/order-details-card.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/shipper-order-card.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/shipper-order-card.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/vendor-products-card.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/vendor-products-card.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/profile.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/profile.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/services.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/services.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/shipper-order.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/shipper-order.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/shipper-signup.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/shipper-signup.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/vendor-add-products.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/vendor-add-products.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/vendor-signup.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/vendor-signup.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,8 +100,99 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/views/partials/home-layout.ejs">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="32" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="15" end1="16" start2="47" end2="48" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+        <range start1="20" end1="21" start2="52" end2="54" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+        <range start1="23" end1="26" start2="56" end2="62" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/views/vendor-signup.ejs">
+      <ranges>
+        <range start1="6" end1="7" start2="6" end2="7" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+        <range start1="32" end1="33" start2="32" end2="33" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+        <range start1="36" end1="37" start2="36" end2="37" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="50" end1="51" start2="50" end2="51" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="61" end1="62" start2="61" end2="62" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+        <range start1="66" end1="67" start2="66" end2="67" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+        <range start1="68" end1="69" start2="68" end2="68" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/views/login.ejs">
+      <ranges>
+        <range start1="2" end1="7" start2="2" end2="7" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="10" end1="12" start2="10" end2="12" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="13" end1="31" start2="13" end2="31" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="32" end1="89" start2="32" end2="95" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+        <range start1="90" end1="94" start2="96" end2="100" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="95" end1="96" start2="101" end2="102" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/views/shipper-signup.ejs">
+      <ranges>
+        <range start1="32" end1="33" start2="32" end2="33" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+        <range start1="36" end1="37" start2="36" end2="37" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="44" end1="45" start2="44" end2="45" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="47" end1="53" start2="47" end2="47" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/middleware/authMiddleware.js">
+      <ranges>
+        <range start1="0" end1="1" start2="0" end2="1" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+        <range start1="7" end1="8" start2="7" end2="8" changelist="c296b23f-36f8-49fb-9124-67960c6127f7" />
+        <range start1="25" end1="27" start2="25" end2="25" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/views/profile.ejs">
+      <ranges>
+        <range start1="13" end1="14" start2="13" end2="14" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="27" end1="28" start2="27" end2="28" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="30" end1="33" start2="30" end2="34" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="34" end1="36" start2="35" end2="38" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+        <range start1="40" end1="40" start2="42" end2="43" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="41" end1="43" start2="44" end2="45" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="44" end1="47" start2="46" end2="52" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="48" end1="54" start2="53" end2="57" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="56" end1="59" start2="59" end2="64" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="60" end1="241" start2="65" end2="76" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="242" end1="242" start2="77" end2="78" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/index.js">
+      <ranges>
+        <range start1="1" end1="1" start2="1" end2="2" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+        <range start1="3" end1="5" start2="4" end2="6" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="6" end1="6" start2="7" end2="12" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+        <range start1="8" end1="8" start2="14" end2="19" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="9" end1="10" start2="20" end2="20" changelist="c296b23f-36f8-49fb-9124-67960c6127f7" />
+        <range start1="13" end1="13" start2="23" end2="24" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+        <range start1="14" end1="14" start2="25" end2="26" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+        <range start1="29" end1="32" start2="41" end2="41" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+        <range start1="33" end1="33" start2="42" end2="139" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="41" end1="41" start2="147" end2="155" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/views/customer-signup.ejs">
+      <ranges>
+        <range start1="6" end1="7" start2="6" end2="7" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+        <range start1="11" end1="12" start2="11" end2="12" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+        <range start1="32" end1="33" start2="32" end2="33" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+        <range start1="36" end1="37" start2="36" end2="37" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="39" end1="40" start2="39" end2="40" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+        <range start1="44" end1="45" start2="44" end2="45" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+        <range start1="50" end1="51" start2="50" end2="51" changelist="1fc04da3-0151-468f-8a53-d0be7de512f2" />
+        <range start1="56" end1="57" start2="56" end2="57" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+        <range start1="61" end1="62" start2="61" end2="62" changelist="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" />
+      </ranges>
+    </file>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -67,21 +202,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Razer/Desktop/final-exam-materials&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Razer/Desktop/final-exam-materials",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Razer\Documents\GitHub\COSC2430-Full-Stack-Application" />
@@ -120,7 +256,7 @@
       <workItem from="1695481469544" duration="4790000" />
       <workItem from="1695524096609" duration="16146000" />
       <workItem from="1695559284253" duration="1220000" />
-      <workItem from="1695568507884" duration="1848000" />
+      <workItem from="1695568507884" duration="24952000" />
     </task>
     <task id="LOCAL-00001" summary="added some base code">
       <option name="closed" value="true" />
@@ -178,11 +314,30 @@
       <option name="project" value="LOCAL" />
       <updated>1695559307117</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="multer set up done and hashing authen half">
+      <option name="closed" value="true" />
+      <created>1695570608958</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695570608958</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added some base code" />
@@ -190,6 +345,9 @@
     <MESSAGE value="fixed header.ejs" />
     <MESSAGE value="removed routes, initialized main page" />
     <MESSAGE value="routed static files" />
-    <option name="LAST_COMMIT_MESSAGE" value="routed static files" />
+    <MESSAGE value="multer set up done and hashing authen half" />
+    <MESSAGE value="update" />
+    <MESSAGE value="Changes by qchi1708" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by qchi1708" />
   </component>
 </project>

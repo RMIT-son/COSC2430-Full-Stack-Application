@@ -1,11 +1,11 @@
-const User = require('src/models/userModel');
+const {User} = require('../models/userModel');
 const bcrypt = require('bcrypt');
 
 function checkAuthenticated(req, res, next){
     if(req.isAuthenticated()){
         return next()
     }
-    res.redirect("/login")
+    return res.redirect("/login");
 }
 
 function checkNotAuthenticated(req, res, next){
@@ -23,8 +23,6 @@ function checkNotAuthenticated(req, res, next){
 }
 
     // Function to authenticate users
-
-    // Session matching
 async function authenticateUser(username, password, done) {
     try {
         const user = await User.findOne({ username: username });
