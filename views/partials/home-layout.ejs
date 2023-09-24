@@ -1,12 +1,12 @@
   <!-- Section-->
   <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
-      <% products.forEach(function(product){ %>
       <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
+      <% products.forEach(function(product){ %>
         <div class="col mb-5">
           <div class="card h-100">
             <!-- Product image-->
-            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+            <img class="card-img-top" src="<%= product.productImage %>" alt="<%=product.name%>" />
             <!-- Product details-->
             <div class="card-body p-4">
               <div class="text-center">
@@ -18,42 +18,16 @@
             </div>
             <!-- Product actions-->
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent mx-auto">
-				      <button type="button" class="btn btn-outline-dark mt-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
-					      View options
-				      </button>
+                <a type="button" class="btn btn-outline-dark mt-auto" href="/product/<%=product._id%>">
+                  View Details
+                </a>
+                <button type="button" class="btn btn-outline-dark mt-auto" onclick="addToCart('<%=product._id%>')">
+                    Add to cart
+                </button>
             </div>
           </div>
         </div>
+          <% }); %>
       </div>
     </div>
-    
-  <!-- Button trigger modal -->
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<div class="modal-dialog modal-dialog-scrollable modal-lg">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h1 class="modal-title fs-5" id="exampleModalLabel"><%= product.name %>></h1>
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
-    <div class="modal-body">
-		<div class="row">
-			<div class="col-md-6 product_img">
-				<img src="" class="img-responsive">
-			</div>
-			<div class="col-md-6 product_content">
-				<p><%= product.desc %>></p>
-				<h3 class="cost"><span class="glyphicon glyphicon-usd"></span> <%= product.price %><small class="pre-cost"><span class="glyphicon glyphicon-usd"></span> 60.00</small></h3>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-light shadow-0" data-bs-dismiss="modal">Close</button>
-      <button type="button" class="btn btn-dark btn-outline-light"> Add To Cart</button>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-<% }); %>
-</div>
   </section>

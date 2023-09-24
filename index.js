@@ -1,16 +1,11 @@
 const express = require('express');
-const mongoose = require('mongoose');
+const session = require('express-session');
+const passport = require('passport');
 const {static} = require("express");
 const { urlencoded } = require('express');
-const Product = require('./src/models/productModel');
+const productController = require('./src/controllers/productController');
 const app = express();
-<<<<<<< Updated upstream
-=======
-const passport = require('passport');
-const User = require('./src/models/userModel');
-const customerController = require('./src/controllers/customerController');
-const authMiddleware = require('./src/middleware/authMiddleware');
->>>>>>> Stashed changes
+const multer = require('multer');
 
 
 // Set up EJS as the view engine
@@ -18,22 +13,32 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('./public'));
 
-// Set up routes
-<<<<<<< Updated upstream
-// app.get('/', shopController.getAllProducts);
 
-app.get('/', (req, res) => {
-    Product.find()
-        .then((products) => {
-            res.render('index', { products: products });
-        })
-        .catch((error) => console.log(error.message));
+// Set up multer
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, "./server-images")
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.fieldname + '-' + Date.now() + file.originalname)
+    }
 });
-=======
-app.get('/', customerController.getAllProducts)
->>>>>>> Stashed changes
+const upload = multer(
+    {storage: storage},
+    ).single("image");
+
+// Set up routes
+// Product routes
+app.get('/', productController.getProducts);
 
 
+// Static Pages
+app.get('/contact', (req, res) =>
+    res.render('contact')
+);
+app.get('/about', (req, res) =>
+    res.render('about')
+);
 
 // Start the server
 const port = 3030;

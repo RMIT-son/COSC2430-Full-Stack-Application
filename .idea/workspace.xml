@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" name="Changes" comment="finished models, and set up base files for backend dev">
-      <change afterPath="$PROJECT_DIR$/src/seed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" name="Changes" comment="routed static files">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/9bc81b8b-b7c7-4cb9-80eb-97551b3d59b3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9bc81b8b-b7c7-4cb9-80eb-97551b3d59b3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/orderModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/orderModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/productController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/authMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/authMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/hashMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/hashMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/sessionMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/validateMiddleware.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,11 +35,25 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;RMIT-son&quot;
+  }
+}</component>
   <component name="GithubProjectSettings">
     <option name="branchProtectionPatterns">
       <list>
         <option value="main" />
       </list>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="47b5c789-c4b5-46a9-a5fe-048af73cd3d6" />
+        <option name="url" value="https://github.com/RMIT-son/COSC2430-Full-Stack-Application.git" />
+      </UrlAndAccount>
     </option>
   </component>
   <component name="MarkdownSettingsMigration">
@@ -51,23 +67,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Razer/Desktop/final-exam-materials",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Razer/Desktop/final-exam-materials&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Razer\Documents\GitHub\COSC2430-Full-Stack-Application" />
       <recent name="C:\Users\Razer\Documents\GitHub\COSC2430-Full-Stack-Application\src\services" />
       <recent name="C:\Users\Razer\Documents\GitHub\COSC2430-Full-Stack-Application\src\models" />
     </key>
@@ -101,7 +118,9 @@
       <workItem from="1695453127042" duration="602000" />
       <workItem from="1695467509560" duration="1074000" />
       <workItem from="1695481469544" duration="4790000" />
-      <workItem from="1695524096609" duration="3722000" />
+      <workItem from="1695524096609" duration="16146000" />
+      <workItem from="1695559284253" duration="1220000" />
+      <workItem from="1695568507884" duration="1848000" />
     </task>
     <task id="LOCAL-00001" summary="added some base code">
       <option name="closed" value="true" />
@@ -111,7 +130,55 @@
       <option name="project" value="LOCAL" />
       <updated>1695091375073</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="render index">
+      <option name="closed" value="true" />
+      <created>1695540081928</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695540081928</updated>
+    </task>
+    <task id="LOCAL-00003" summary="render index">
+      <option name="closed" value="true" />
+      <created>1695541067035</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695541067035</updated>
+    </task>
+    <task id="LOCAL-00004" summary="render index">
+      <option name="closed" value="true" />
+      <created>1695542992594</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695542992594</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fixed header.ejs">
+      <option name="closed" value="true" />
+      <created>1695545026762</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695545026762</updated>
+    </task>
+    <task id="LOCAL-00006" summary="removed routes, initialized main page">
+      <option name="closed" value="true" />
+      <created>1695558358568</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695558358568</updated>
+    </task>
+    <task id="LOCAL-00007" summary="routed static files">
+      <option name="closed" value="true" />
+      <created>1695559307117</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1695559307117</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +186,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added some base code" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some base code" />
+    <MESSAGE value="render index" />
+    <MESSAGE value="fixed header.ejs" />
+    <MESSAGE value="removed routes, initialized main page" />
+    <MESSAGE value="routed static files" />
+    <option name="LAST_COMMIT_MESSAGE" value="routed static files" />
   </component>
 </project>
