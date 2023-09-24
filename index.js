@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const {static} = require("express");
 const { urlencoded } = require('express');
-const Product = require('./src/models/productModel');
+const productController = require('./src/controllers/productController');
 const app = express();
 
 
@@ -14,16 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('./public'));
 
 // Set up routes
-
-app.get('/', (req, res) => {
-    Product.find()
-        .then((products) => {
-            res.render('index', { products: products });
-        })
-        .catch((error) => console.log(error.message));
-});
-
-
+app.get('/', productController.getIndexPage);
 
 // Start the server
 const port = 3030;
