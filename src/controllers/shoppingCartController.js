@@ -77,8 +77,46 @@ async function randomOrder(req, res){
         return res.send("An error has occurred");
     }
 }
+async function createOrder(req, res) {
+    try {
+        const user = req.isAuthenticated() ? req.user : { userType: '' };
+        
+        if (user.userType !== "customer") {
+            return res.redirect('/login');  // Ensure it's a customer
+        }
+
+        const cartItems = await Cart.find({ customer: user._id }).populate('product');
+
+        // Transform cart items to the structure that your Order schema expects
+        const productsInOrder = cartItems.map(item => {
+            return {
+                product: item.product._id,
+                // Add any other necessary attributes
+            };
+        });
+
+        // Create a new order
+        const newOrder = new Order({
+            products: productsInOrder,
+            customer: user._id,
+            // Add other order attributes if necessary
+        });
+        
+        await newOrder.save();
+
+        // Clear the cart after creating the order
+        await Cart.deleteMany({ customer: user._id });
+
+        res.redirect('/order-details/' + newOrder._id);  // Redirect to the order details page
+    } catch (error) {
+        console.error("Error Details:", error);
+        res.status(500).send('Error occurred while creating order. Check the server logs for more details.');
+    }
+}
+
 module.exports = {
     addToCart,
     removeFromCart,
-    randomOrder
+    randomOrder,
+    createOrder
 }

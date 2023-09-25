@@ -23,14 +23,14 @@ const orderSchema = new mongoose.Schema({
     hub: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Hub",
-        required: true,
+        
     },
 
     status: {
         type: String,
         default: "Active",
         enum: ["active", "delivered", "cancelled"],
-        require: true,
+        
     }
 });
 
