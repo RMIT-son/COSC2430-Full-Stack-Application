@@ -41,6 +41,45 @@ async function signup(req, res) {
     }
 }
 
+async function shipper(req, res) {
+    const user = req.isAuthenticated() ? req.user : { userType: '' };
+
+    try {
+        const shipper = await Shipper.findById(user.id).populate('assignedDistributionHub');
+        const hub = shipper.assignedDistributionHub;
+        const orders = await Order.find({ hub: hub._id })
+            .populate('hub')
+            .populate('customer');
+        res.render('shipper-order', { orders: orders, shipper: shipper, req : req , user : req.isAuthenticated() ? req.user : { userType: '' }}); // Change user to shipper here
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Internal Server Error');
+    }
+}
+
+async function order(req, res) {
+    const order = await Order.findById(req.params.id)
+        .populate('customer')
+        .populate('products.product');
+    res.render('order', {order : order, req : req, user : req.isAuthenticated() ? req.user : { userType: '' }});
+}
+
+async function status(req, res) {
+    try {
+        const orderId = req.params.id;
+        const newStatus = req.body.status;
+        const newOrder = await Order.findByIdAndUpdate(orderId, { status: newStatus }, { new: true });
+
+        if (!newOrder) {
+            return res.status(404).send("Order not exist");
+        }
+
+        res.redirect('/shipper');
+    } catch (e) {
+        console.error(e);
+        return res.status(500).send("An error has occurred");
+    }
+}
 module.exports = {
     signup,
     signupview,
