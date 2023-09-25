@@ -4,35 +4,40 @@ const {Hub} = require('../models/hubModel');
 const {Order} = require('../models/orderModel');
 
 async function addToCart(req, res) {
-        try {
-            const product = await Product.findById(req.params.id);
-            const user = req.isAuthenticated() ? req.user : {userType: ''};
-            if (user.userType !== "") {
-            const newCartProduct = await new Cart({
-                product: product,
-                customer: user,
-            })
-            await newCartProduct.save();
-            res.redirect('/');
-            }
-            res.redirect('/cart');
-        } catch (e) {
-            console.log(e);
-        }
-    }
-
-async  function removeFromCart(req, res){
     try {
         const product = await Product.findById(req.params.id);
         const user = req.isAuthenticated() ? req.user : {userType: ''};
-        await Product.deleteOne({ product: product._id, customer: user._id });
+        if (user.userType !== "") {
+            const newCartProduct = await new Cart({
+                product: product,
+                customer: user,
+            });
+            await newCartProduct.save();
 
-        res.redirect('/cart');
+            // Redirect to shopping cart instead of the homepage
+            res.redirect('/cart');
+        } else {
+            res.redirect('/login'); // Redirect to login if not authenticated
+        }
+    } catch (e) {
+        console.log(e);
+    }
+}
+
+
+async function removeFromCart(req, res) {
+    try {
+        const user = req.isAuthenticated() ? req.user : {userType: ''};
+        if (user.userType !== "") {
+            await Cart.findOneAndDelete({ product: req.params.id, customer: user._id });
+            res.redirect('/cart');
+        } else {
+            res.redirect('/login'); // Redirect to login if not authenticated
+        }
     } catch (e) {
         console.log(e);
         return res.send("Error!");
     }
-
 }
 
 async function randomOrder(req, res){
