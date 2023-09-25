@@ -1,9 +1,8 @@
 const express = require('express');
-const mongoose = require('mongoose');
+const {body} = require('express-validator');
 const session = require('express-session');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-const bcrypt = require('bcrypt');
 const productController = require('./src/controllers/productController');
 const userController = require('./src/controllers/userController');
 const shoppingCartController = require('./src/controllers/shoppingCartController');
@@ -13,23 +12,21 @@ const customerController = require('./src/controllers/customerController');
 const app = express();
 const multer = require('multer');
 const { checkAuthenticated, checkNotAuthenticated, authenticateUser } = require('./src/middleware/authMiddleware');
-const {User ,Customer, Shipper, Vendor} = require("./src/models/userModel");
-const { Product } = require("./src/models/productModel");
-const {Cart} = require("./src/models/cartModel");
-const {hashPassword} = require("./src/middleware/hashMiddleware");
+const {User} = require("./src/models/userModel");
+
 
 // Set up EJS as the view engine
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
 app.use(express.static('./public'));
-app.use("/server-images", express.static("uploads"))
+app.use("./server-images", express.static("./server-images"))
 
 
 // Set up multer
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, "./server-images")
+        cb(null, "./server-images/")
     },
     filename: function (req, file, cb) {
         cb(null, file.fieldname + '-' + Date.now() + file.originalname)
@@ -86,69 +83,50 @@ app.get('/signup/vendor', checkNotAuthenticated, (req, res) => {
     res.render('vendor-signup');
 });
 
-app.get('/signup/shipper', checkNotAuthenticated, (req, res) => {
-    res.render('shipper-signup');
-});
+app.get('/vendor', checkAuthenticated, vendorController.vendor);
+app.get('/add', checkAuthenticated, vendorController.add);
+app.post(
+    '/addproduct', checkAuthenticated,
+    upload,
+    [
+        body('name')
+            .isString()
+            .isLength({ min: 10, max: 20 })
+            .withMessage('Product name must be a text between 10 and 20 characters'),
 
-app.get("/profile", checkAuthenticated, (req, res) => {
-    res.render("profile", { user: req.user });
-})
+        body('price')
+            .isNumeric()
+            .isFloat({ min: 0 })
+            .withMessage('Price must be a positive number'),
 
-app.get('/cart', checkAuthenticated, async (req, res) => {
-    try {
-        const user = req.isAuthenticated() ? req.user : { userType: '' };
-        const cartItems = await Cart.find({ customer: user._id }).populate('product');
-        let total = 0;
-        cartItems.forEach(function(cartItem) {
-            total = total + cartItem.product.price;
-        }) 
+        body('desc')
+            .isString()
+            .isLength({ max: 500 })
+            .withMessage('Description is at most 500 characters'),
+    ],
+       vendorController.addProduct)
+app.get('/shipper', checkAuthenticated, shipperController.shipper);
+app.get('/order/:id', checkAuthenticated, shipperController.order);
+app.post('/status/:id', checkAuthenticated, shipperController.status);
 
-        res.render('shopping-cart', { user: user, cartItems: cartItems, total : total , req : req});
-    } catch (e) {
-        console.log(e);
-        return res.send("An error has occurred");
-    }
-});
+
+app.post('/remove/:id', shoppingCartController.removeFromCart);
+
+app.get('/signup/shipper', checkNotAuthenticated, shipperController.signupview);
+
+app.get("/profile", checkAuthenticated, userController.profile);
+app.post('/profile/:id',checkAuthenticated, upload, userController.updateProfile);
+
+app.get('/cart', checkAuthenticated, shoppingCartController.seeCart);
 app.post('/signup/customer', upload, customerController.signup);
 
 app.post('/signup/vendor', upload, vendorController.signup)
 
 app.post('/signup/shipper', upload, shipperController.signup)
 
+app.post('/login', checkNotAuthenticated, userController.loginForm);
 
-app.post('/login', checkNotAuthenticated, async (req, res, next) => {
-    passport.authenticate('local', (err, user, info) => {
-        if(err) {
-            return next(err);
-        }
-        if(!user) {
-            return res.redirect('/login?error=invalidUsernamePassword');
-        }
-        req.session.returnTo = req.originalUrl;
-        req.logIn(user, err => {
-            if (err) {
-                return next(err);
-            }
-            if (user.userType === 'customer') {
-                res.redirect('/');
-            } else if (user.userType === 'vendor') {
-                res.redirect('/vendor');
-            } else if (user.userType === 'shipper') {
-                res.redirect('/shipper');
-            } else {
-                res.redirect('/'); // Default redirect
-            }
-        });
-    })(req, res, next);
-});
-
-
-app.delete("/logout", (req, res) => {
-    req.logout(req.user, err => {
-        if (err) return next(err)
-        res.redirect("/")
-    })
-})
+app.delete("/logout", userController.logout);
 // TPD test
 
 app.post('/product/:id', shoppingCartController.addToCart);
@@ -165,14 +143,25 @@ app.get('/about', (req, res) =>
     res.render('about')
 );
 
-app.get('/test', (req, res) => {
-    console.log(req.isAuthenticated()); // true or false
+app.get('/copyright', (req, res) => {
+    res.render('copyright')
+});
 
-    console.log(req.user); // user object if authenticated
-
-    res.send('Check logs');
+app.get('/help', (req, res) => {
+    res.render('help')
 })
 
+app.get('/privacy', (req, res) => {
+    res.render('privacy-policy')
+})
+
+app.get('/terms', (req, res) => {
+    res.render('terms-and-conditions')
+})
+
+app.get('/services', (req, res) => {
+    res.render('services')
+})
 // Start the server
 const port = 3030;
 app.listen(port, () => console.log(`Server running on port http://localhost:${port}`));

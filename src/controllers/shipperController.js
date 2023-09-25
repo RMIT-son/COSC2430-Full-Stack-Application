@@ -1,6 +1,18 @@
 const {User, Shipper} = require("../models/userModel");
 const {hashPassword} = require("../middleware/hashMiddleware");
+const {Hub} = require("../models/hubModel");
+const {Order} = require("../models/orderModel");
 
+async function signupview(req, res) {
+    try {
+        const hubs = await Hub.find({});
+        const error = req.query.error;
+        res.render('shipper-signup', { error , hubs: hubs, req : req, user : req.isAuthenticated() ? req.user : { userType: '' }});
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Internal Server Error');
+    }
+}
 async function signup(req, res) {
     const username = req.body.username;
     const password = req.body.password;
@@ -30,5 +42,9 @@ async function signup(req, res) {
 }
 
 module.exports = {
-    signup
+    signup,
+    signupview,
+    shipper,
+    order,
+    status
 }
