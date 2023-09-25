@@ -17,6 +17,8 @@ const {User ,Customer, Shipper, Vendor} = require("./src/models/userModel");
 const { Product } = require("./src/models/productModel");
 const {Cart} = require("./src/models/cartModel");
 const {hashPassword} = require("./src/middleware/hashMiddleware");
+const {Hub} = require("./src/models/hubModel");
+const {Order} = require("./src/models/orderModel");
 
 // Set up EJS as the view engine
 app.set('view engine', 'ejs');
@@ -109,6 +111,7 @@ app.get('/cart', checkAuthenticated, async (req, res) => {
         return res.send("An error has occurred");
     }
 });
+
 app.post('/signup/customer', upload, customerController.signup);
 
 app.post('/signup/vendor', upload, vendorController.signup)
@@ -153,6 +156,54 @@ app.delete("/logout", (req, res) => {
 
 app.post('/product/:id', shoppingCartController.addToCart);
 app.post('/remove/:id', shoppingCartController.removeFromCart);
+
+
+
+// ... [all your other imports and middleware]
+
+app.post('/order', async (req, res) => {
+    try {
+        // Check user authentication and user type
+        if (!req.isAuthenticated() || req.user.userType !== "customer") {
+            return res.status(403).send("Unauthorized");
+        }
+
+        // Fetch cart items
+        const cartItems = await Cart.find({ customer: req.user._id }).populate('product');
+        
+        if (!cartItems.length) {
+            return res.status(400).send("No items in cart");
+        }
+
+        // Calculate total amount
+        const total = cartItems.reduce((acc, cartItem) => acc + cartItem.product.price, 0);
+
+        // Create product references for the order
+        const productRefs = cartItems.map(cartItem => ({ product: cartItem.product._id }));
+        console.log(Order);
+
+        // Create the new order
+        const newOrder = new Order({
+            products: productRefs,
+            customer: req.user._id,
+            total: total
+        });
+
+        await newOrder.save();
+
+        // Clear the cart after order creation
+        await Cart.deleteMany({ customer: req.user._id });
+
+        res.redirect('/order-details/' + newOrder._id);
+    } catch (error) {
+        console.error("Error Message:", error.message);
+        console.error("Error Stack:", error.stack);
+        res.status(500).send("An error occurred while creating the order.");
+    }
+    
+});
+
+
 
 
 
