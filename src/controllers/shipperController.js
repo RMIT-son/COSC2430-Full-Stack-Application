@@ -5,7 +5,7 @@ const {Order} = require("../models/orderModel");
 
 async function signupview(req, res) {
     try {
-        const hubs = await Hub.find({});
+        const hubs = await Hub.find();
         const error = req.query.error;
         res.render('shipper-signup', { error , hubs: hubs, req : req, user : req.isAuthenticated() ? req.user : { userType: '' }});
     } catch (error) {
