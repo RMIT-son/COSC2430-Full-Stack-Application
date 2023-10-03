@@ -3,7 +3,7 @@ Full Stack Web Application for the course COSC2430 -  Web Programming at RMIT Vi
 
 ## Folder Structure
 
-The folder structure of this project is as follows:
+The folder structure of this project is as follows:  
 
 ```
 projectfolder/  
@@ -24,3 +24,16 @@ projectfolder/
 ├── index.js  
 ├── package.json  
 └── README.md  
+```
+
+## Github Repository
+[Link to Github Repository](https://github.com/RMIT-son/COSC2430-Full-Stack-Application)  
+
+## Youtube Video
+[Link to Video](https://youtu.be/JU9pfCNxCxk?si=KMkai-zGEaCO18XG)
+
+## Test Accounts
+| Username | Password | Role     |
+|----------|----------|----------|
+| Jimmy    | password | customer |
+| Billy    | password | vendor   |

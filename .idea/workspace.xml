@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" name="Changes" comment="routed static files">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9bc81b8b-b7c7-4cb9-80eb-97551b3d59b3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9bc81b8b-b7c7-4cb9-80eb-97551b3d59b3.xml" afterDir="false" />
+    <list default="true" id="c1a7c7d4-0728-4f8f-9f25-74e3232a03cb" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/productController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/authMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/authMiddleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/hashMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/hashMiddleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/sessionMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/validateMiddleware.js" afterDir="false" />
     </list>
+    <list id="c296b23f-36f8-49fb-9124-67960c6127f7" name="Changes by macbook" comment="" />
+    <list id="1fc04da3-0151-468f-8a53-d0be7de512f2" name="Changes by qchi1708" comment="Changes by qchi1708" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="chi-branch" />
+        <entry key="$PROJECT_DIR$" value="tpd-branch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,6 +53,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -67,22 +64,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Razer/Desktop/final-exam-materials&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Razer/Documents/GitHub/COSC2430-Full-Stack-Application/views",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Razer\Documents\GitHub\COSC2430-Full-Stack-Application\views" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Razer\Documents\GitHub\COSC2430-Full-Stack-Application" />
       <recent name="C:\Users\Razer\Documents\GitHub\COSC2430-Full-Stack-Application\src\services" />
@@ -103,6 +104,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.test" />
+        <item itemvalue="npm.test" />
       </list>
     </recent_temporary>
   </component>
@@ -120,7 +122,8 @@
       <workItem from="1695481469544" duration="4790000" />
       <workItem from="1695524096609" duration="16146000" />
       <workItem from="1695559284253" duration="1220000" />
-      <workItem from="1695568507884" duration="1848000" />
+      <workItem from="1695568507884" duration="24952000" />
+      <workItem from="1695604372238" duration="4387000" />
     </task>
     <task id="LOCAL-00001" summary="added some base code">
       <option name="closed" value="true" />
@@ -178,11 +181,54 @@
       <option name="project" value="LOCAL" />
       <updated>1695559307117</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="multer set up done and hashing authen half">
+      <option name="closed" value="true" />
+      <created>1695570608958</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695570608958</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update">
+      <option name="closed" value="true" />
+      <created>1695607345080</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1695607345080</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Changes by qchi1708">
+      <option name="closed" value="true" />
+      <created>1695607359823</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1695607359823</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update">
+      <option name="closed" value="true" />
+      <created>1695607388190</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1695607388190</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added some base code" />
@@ -190,6 +236,9 @@
     <MESSAGE value="fixed header.ejs" />
     <MESSAGE value="removed routes, initialized main page" />
     <MESSAGE value="routed static files" />
-    <option name="LAST_COMMIT_MESSAGE" value="routed static files" />
+    <MESSAGE value="multer set up done and hashing authen half" />
+    <MESSAGE value="Changes by qchi1708" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

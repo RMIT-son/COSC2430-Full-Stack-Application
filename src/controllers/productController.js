@@ -1,30 +1,46 @@
-const Product = require('../models/productModel'); // Import your Product model here
+const {Product} = require('../models/productModel'); // Import your Product model here
 
 async function getProducts(req, res) {
     try {
 
-        const minPrice = parseFloat(req.query.minPrice) || 0; // Get minimum price from query parameters, default to 0 if not provided
-        const maxPrice = parseFloat(req.query.maxPrice) || Number.MAX_SAFE_INTEGER; // Get maximum price from query parameters, default to maximum safe integer if not provided
-        const searchQuery = req.query.searchQuery || ''; // Get search query from query parameters
-        // Create a filter object based on the provided criteria
+        const min = parseFloat(req.query.min) || 0;
+        const max = parseFloat(req.query.max) || Number.MAX_SAFE_INTEGER;
+        const search = req.query.search || '';
 
+        // Filter products based on the query parameters
         const filter = {
-            price: { $gte: minPrice, $lte: maxPrice }, // Filter by price within the specified range
-            name: { $regex: new RegExp(searchQuery, 'i') }, // Case-insensitive search by product name
+            price: { $gte: min, $lte: max }, // Filter by price
+            name: { $regex: new RegExp(search, 'i') }, // Search by name
         };
         const user = req.isAuthenticated() ? req.user : { userType: '' };
 
-        // Fetch products that match the filter criteria
+        // Query the database for products based on the filter
         const products = await Product.find(filter);
 
-        // Render the page with the filtered products
-        res.render('layout', { products: products , req : req, user : user, cartItems : cartItems});
+        // Render the products view along with the necessary data
+        res.render('index', { products: products , req : req, user : user});
     } catch (error) {
         console.error(error.message);
         res.status(500).send('Server Error');
     }
 }
 
+async function getProductDetails(req, res) {
+    try {
+        // Get the user from the request object
+        const user = req.isAuthenticated() ? req.user : { _id: null };
+
+        // Query the database for the product with the given id
+        const product = await Product.findById(req.params.id);
+
+        res.render('productDetail', { product: product, req: req, user: user });
+    } catch (error) {
+        console.error(error);
+        return res.status(500).send('Internal Server Error');
+    }
+}
+
 module.exports = {
-    getProducts
+    getProducts,
+    getProductDetails
 };
